@@ -1,5 +1,7 @@
 import networkx as nx
 import pprint
+import matplotlib.pyplot as plt
+import matplotlib
 
 
 class GraphBasedRecommendation:
@@ -119,8 +121,14 @@ def main():
     pr = gbr.fit_predict(personalization)
 
     pprint.pprint(pr)
+    #pprint.pprint(gbr.staging_edges)
 
-    pprint.pprint(gbr.staging_edges)
+    for r in pr.values():
+        pos = range(len(r))
+        plt.bar(pos, [score for (_, score) in r])
+        plt.xticks(pos, [label for (label, _) in r])
+        plt.show()
 
 if __name__ == '__main__':
+    matplotlib.rc('font', family='Malgun Gothic')
     main()
