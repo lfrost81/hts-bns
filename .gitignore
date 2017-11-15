@@ -101,4 +101,6 @@ ENV/
 .mypy_cache/
 
 # pycharm
-./idea/
+.idea/
+
+*DS_store*
