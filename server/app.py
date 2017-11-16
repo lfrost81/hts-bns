@@ -28,8 +28,10 @@ async def root(request):
 
 @app.route("/bns")
 async def bns(request):
-    data = {}
-    content = await get_template('bns.html', title='Business Network Service', data=data)
+    data = {
+        'query' : ''
+    }
+    content = await get_template('bns.html', **data)
     return content
 
 
