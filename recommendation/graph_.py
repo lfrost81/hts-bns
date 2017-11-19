@@ -2,6 +2,8 @@ import networkx as nx
 import pprint
 import matplotlib.pyplot as plt
 import matplotlib
+import copy
+import time
 
 
 class GraphBasedRecommendation:
@@ -32,6 +34,8 @@ class GraphBasedRecommendation:
         self.add_edge(v, u, w=w, edge_type=edge_type)
 
     def __normalize_personalization(self, personalization={}):
+        personalization = copy.deepcopy(personalization)
+
         # Normalize preference and teleport probabilities
         sum_of_personalization = sum([v for v in personalization.values()])
         sum_of_weights = self.pref_weight + self.teleport_weight
@@ -65,7 +69,7 @@ class GraphBasedRecommendation:
 
         # Calculate pagerank
         pr = nx.pagerank(self.g, 1 - (self.pref_weight + self.teleport_weight),
-                         weight='w', personalization=personalization, max_iter=1000)
+                         weight='w', personalization=personalization, max_iter=1000, tol=0.1)
 
         # Formatting result
         result = dict()
@@ -91,21 +95,37 @@ class GraphBasedRecommendation:
 def main():
     edge_weights = {
         'shop_to_shop': 0.30,
-        'shop_to_topic': 0.20,
-        'neighbors': 0.50
+        'shop_to_topic': 0.30,
+        'neighbors': 0.40
     }
-    gbr = GraphBasedRecommendation(edge_weights, pref_weight=0.45, teleport_weight=0.05)
+    gbr = GraphBasedRecommendation(edge_weights, pref_weight=0.15, teleport_weight=0.05)
 
     # Add shop_to_shop relations
     gbr.add_node('신선설농탕', '가맹점')
     gbr.add_node('놀부부대찌개', '가맹점')
     gbr.add_node('스타벅스', '가맹점')
-    gbr.add_bi_edge('신선설농탕', '스타벅스', 6, 'shop_to_shop')
-    gbr.add_bi_edge('스타벅스', '놀부부대찌개', 5, 'shop_to_shop')
-    gbr.add_bi_edge('신선설농탕', '놀부부대찌개', 3, 'shop_to_shop')
+    gbr.add_node('이디야', '가맹점')
+    gbr.add_node('탐앤탐스', '가맹점')
+
+    gbr.add_edge('신선설농탕', '스타벅스', 32, 'shop_to_shop')
+    gbr.add_edge('스타벅스', '신선설농탕', 33, 'shop_to_shop')
+    gbr.add_edge('스타벅스', '놀부부대찌개', 32, 'shop_to_shop')
+    gbr.add_edge('놀부부대찌개', '스타벅스', 10, 'shop_to_shop')
+    gbr.add_edge('신선설농탕', '놀부부대찌개', 13, 'shop_to_shop')
+    gbr.add_edge('놀부부대찌개', '신선설농탕', 13, 'shop_to_shop')
+    gbr.add_edge('신선설농탕', '이디야', 30, 'shop_to_shop')
+    gbr.add_edge('이디야', '신선설농탕', 25, 'shop_to_shop')
+    gbr.add_edge('이디야', '놀부부대찌개', 35, 'shop_to_shop')
+    gbr.add_edge('놀부부대찌개', '이디야', 35, 'shop_to_shop')
+    gbr.add_edge('신선설농탕', '탐앤탐스', 30, 'shop_to_shop')
+    gbr.add_edge('탐앤탐스', '신선설농탕', 30, 'shop_to_shop')
+    gbr.add_edge('놀부부대찌개', '탐앤탐스', 30, 'shop_to_shop')
+    gbr.add_edge('탐앤탐스', '놀부부대찌개', 30, 'shop_to_shop')
 
     # Add neighbor relations
-    gbr.add_bi_edge('스타벅스', '놀부부대찌개', 1, 'neighbors')
+    gbr.add_bi_edge('이디야', '놀부부대찌개', 1, 'neighbors')
+    gbr.add_bi_edge('이디야', '탐앤탐스', 1, 'neighbors')
+    gbr.add_bi_edge('이디야', '신선설농탕', 1, 'neighbors')
 
     # Add shop_to_topic relations
     gbr.add_node('고급스러운', '토픽')
@@ -113,10 +133,14 @@ def main():
     gbr.add_bi_edge('놀부부대찌개', '합리적인', 1, 'shop_to_topic')
     gbr.add_bi_edge('신선설농탕', '합리적인', 1, 'shop_to_topic')
     gbr.add_bi_edge('스타벅스', '고급스러운', 1, 'shop_to_topic')
+    gbr.add_bi_edge('이디야', '합리적인', 1, 'shop_to_topic')
+    gbr.add_bi_edge('탐앤탐스', '고급스러운', 1, 'shop_to_topic')
+    gbr.add_bi_edge('탐앤탐스', '합리적인', 1, 'shop_to_topic')
 
     personalization = {
-        '스타벅스': 1,
         '신선설농탕': 1,
+        '탐앤탐스': 1,
+        '스타벅스': 3
     }
     pr = gbr.fit_predict(personalization)
 
@@ -124,9 +148,18 @@ def main():
     #pprint.pprint(gbr.staging_edges)
 
     for r in pr.values():
+        #r = [(label, score) for label, score in r if label not in personalization]
+
         pos = range(len(r))
         plt.bar(pos, [score for (_, score) in r])
-        plt.xticks(pos, [label for (label, _) in r])
+        tmp = []
+        for label, _ in r:
+            if label in personalization:
+                tmp.append('*' + label)
+            else:
+                tmp.append(label)
+
+        plt.xticks(pos, tmp)
         plt.show()
 
 if __name__ == '__main__':
