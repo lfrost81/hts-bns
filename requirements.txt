@@ -1,2 +1,6 @@
 sanic>=0.6
 jinja2
+
+numpy
+matplotlib
+networkx
