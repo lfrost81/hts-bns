@@ -28,12 +28,34 @@ async def root(request):
 
 @app.route("/bns")
 async def bns(request):
+
+    # Get Values from request
+
     data = {
         'query' : ''
     }
+
+    # get results from recommendation module
+
+    # generate template from result data
     content = await get_template('bns.html', **data)
     return content
 
+
+@app.route("/report")
+async def report(request):
+
+    # Get Values from request
+
+    data = {
+        'query' : ''
+    }
+
+    # get results from recommendation module
+
+    # generate template from result data
+    content = await get_template('test.template.html', **data)
+    return content
 
 if __name__ == "__main__":
     port = 8000
