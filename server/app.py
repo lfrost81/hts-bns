@@ -29,11 +29,21 @@ async def root(request):
 @app.route("/bns")
 async def bns(request):
 
-    # Get Values from request
-
+    # default
     data = {
-        'query' : ''
+        'query' : '',
+        'range1' : 50,
+        'range2' : 50,
+        'range3' : 50
     }
+
+    # Get Values from request
+    if request.raw_args:
+        data['query'] = request.raw_args['query']
+        data['range1'] = int(request.raw_args['relation'])
+        data['range2'] = int(request.raw_args['attribute'])
+        data['range3'] = int(request.raw_args['following'])
+
 
     # get results from recommendation module
 
