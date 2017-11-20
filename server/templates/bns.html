@@ -81,7 +81,7 @@
                 <div class="input-group form-group">
                     <input type="text" class="form-control" name="query" id="query" placeholder="Search for..." value='{{query.strip()}}'/>
                     <!--span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="location.href='/?query='+document.getElementById('query').value;">Search!</button></span-->
-                    <span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="checkAndMove();">추천</button></span>
+                    <span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="checkAndMove();">Recommend</button></span>
                 </div>
             </form>
         </div>
@@ -140,7 +140,10 @@
     </div>
 
     <!-- result layout -->
+    <br/>
     <hr/>
+    <hr/>
+    <br/>
 
     <div class="row" style="padding:15px 0 15px">
         <div class="col-6">
@@ -151,30 +154,56 @@
                 <div class="card-body">
                     <div id="relation-graph" style="width:100%; height:400px;"></div>
                     <script>
-$(function () {
-    var myChart = Highcharts.chart('relation-graph', {
-        chart: {
-            type: 'bar'
-        },
+                        Highcharts.chart('relation-graph', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: '연관 매장 비율'
+    },
+    subtitle: {
+        text: ' from HyundaiCard transaction data'
+    },
+    xAxis: {
+        categories: [
+            '커피빈',
+            'GS25',
+            '스타벅스',
+            '전광수커피',
+            '이디야',
+            '콩심 콩나물국밥',
+            '놀부 부대찌게',
+            '강남 CGV',
+            '블루밍 가든',
+            '지오다노'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
         title: {
-            text: '연관 매장 매출액'
-        },
-        xAxis: {
-            categories: ['커피빈', '스타벅스', '커피빈']
-        },
-        yAxis: {
-            title: {
-                text: '매출액 (천만원)'
-            }
-        },
-        series: [{
-            name: '연관 매출',
-            data: [15.3, 8, 10.5]
-        }, {
-            name: '총 매출',
-            data: [35.3, 50.8, 20.7]
-        }]
-    });
+            text: '연관비율(%)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: '연관비율',
+        data: [32.8, 21.6, 13.2, 10.8, 8.5, 6.13, 5.34, 2.11, 1.09, 1.08]
+
+    }]
 });
                             </script>
                 </div> <!-- div class="card-body"-->
