@@ -76,23 +76,24 @@
 <div class="container-fluid">
     <div class="row" style="padding-top:15px">
         <!-- left layout -->
+        <div class="col-12">
+            <form name="bnsform" class="form" onSubmit="checkAndMove();">
+                <div class="input-group form-group">
+                    <input type="text" class="form-control" name="query" id="query" placeholder="Search for..." value='{{query.strip()}}'/>
+                    <!--span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="location.href='/?query='+document.getElementById('query').value;">Search!</button></span-->
+                    <span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="checkAndMove();">추천</button></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom:5px">
         <div class="col-4">
             <div class="row">
-                <div class="col-12">
-                    <form name="bnsform" class="form" onSubmit="checkAndMove();">
-                        <div class="input-group form-group">
-                            <input type="text" class="form-control" name="query" id="query" placeholder="Search for..." value='{{query.strip()}}'/>
-                            <!--span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="location.href='/?query='+document.getElementById('query').value;">Search!</button></span-->
-                            <span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="checkAndMove();">추천</button></span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row" style="padding-bottom:5px">
                 <div class="col-8">
-                    <span class="align-middle">
-                        <input type="range" name="range1" min="1" max="100" value="{{range1}}" class="slider" id="range1">
-                    </span>
+                <span class="align-middle">
+                    <input type="range" name="range1" min="1" max="100" value="{{range1}}" class="slider" id="range1">
+                </span>
                 </div>
                 <div class="col-4">
                     <button type="button" class="btn btn-outline-primary btn-sm disabled col-12">
@@ -101,8 +102,11 @@
                 </div>
                 <script>change_bar_value("range1", "value1");</script>
             </div>
-            <div class="row h-5"></div>
-            <div class="row" style="padding-bottom:5px">
+        </div>
+
+        <!-- attribute button -->
+        <div class="col-4">
+            <div class="row">
                 <div class="col-8">
                     <span class="align-middle">
                         <input type="range" name="range2" min="1" max="100" value="{{range2}}" class="slider" id="range2">
@@ -115,8 +119,11 @@
                 </div>
                 <script>change_bar_value("range2", "value2");</script>
             </div>
-            <div class="row h-5"></div>
-            <div class="row" style="padding-bottom:5px">
+        </div>
+
+        <!-- following button -->
+        <div class="col-4">
+            <div class="row">
                 <div class="col-8">
                     <span class="align-middle">
                         <input type="range" name="range3" min="1" max="100" value="{{range3}}" class="slider" id="range3">
@@ -130,18 +137,20 @@
                 <script>change_bar_value("range3", "value3");</script>
             </div>
         </div>
+    </div>
 
-        <!-- right layout -->
-        <div class="col-8">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header text-white bg-secondary">
-                            연관 매장 비율
-                        </div>
-                        <div class="card-body">
-                            <div id="relation-graph" style="width:100%; height:400px;"></div>
-                            <script>
+    <!-- result layout -->
+    <hr/>
+
+    <div class="row" style="padding:15px 0 15px">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header text-white bg-secondary">
+                    연관 매장 비율
+                </div>
+                <div class="card-body">
+                    <div id="relation-graph" style="width:100%; height:400px;"></div>
+                    <script>
 $(function () {
     var myChart = Highcharts.chart('relation-graph', {
         chart: {
@@ -168,20 +177,18 @@ $(function () {
     });
 });
                             </script>
-                        </div> <!-- div class="card-body"-->
-                    </div>
-                </div>
+                </div> <!-- div class="card-body"-->
             </div>
-            <div class="row" style="padding-top:15px">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header text-white bg-secondary">
-                            성향 비율
-                        </div>
-                        <div class="card-body">
-                            <div id="attribute-graph" style="width: 100%; height: 400px;"></div>
-                        </div>
-                        <script>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header text-white bg-secondary">
+                    성향 비율
+                </div>
+                <div class="card-body">
+                    <div id="attribute-graph" style="width: 100%; height: 400px;"></div>
+                </div>
+                <script>
                             Highcharts.chart('attribute-graph', {
     chart: {
         plotBackgroundColor: null,
@@ -235,8 +242,82 @@ $(function () {
     }]
 });
                         </script>
-                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-top:15px">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header text-white bg-secondary">
+                    related graph
                 </div>
+                <div class="card-body">
+                    <iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;viz=GVIZ&amp;t=GRAPH&amp;gc=true&amp;gd=true&amp;sdb=1&amp;rmax=100000&amp;q=select+col0%2C+col1%2C+col2+from+1T_eyGaARhB3u4WpCSe2s6oFI7ubQtSUKzczRRYLk&amp;qrs=+where+col0+%3E%3D+&amp;qre=+and+col0+%3C%3D+&amp;qe=&amp;uiversion=2&amp;state=%7B%22ps%22%3A%221_4_w_x_0_-11_13_3_o_-14_5_-15_-y_2_h_-2_6_-1d_0_7_1n_-3_8_-1x_6_9_14_-7_1_-s_7_%22%2C%22cx%22%3A18.145597398765894%2C%22cy%22%3A-2.738958097926927%2C%22sw%22%3A553.1471024397231%2C%22sh%22%3A283.97442920096785%2C%22z%22%3A1.0009649160949998%7D&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=600&amp;height=400"></iframe>
+                </div> <!-- div class="card-body"-->
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header text-white bg-secondary">
+                    성향 비율
+                </div>
+                <div class="card-body">
+                    <div id="attribute-graph2" style="width: 100%; height: 400px;"></div>
+                </div>
+                <script>
+                            Highcharts.chart('attribute-graph2', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: '2017-11-01 ~ 2017-11-22 성향 비율'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: '이야기하기 좋은',
+            y: 56.33
+        }, {
+            name: '편안한',
+            y: 24.03,
+            sliced: true,
+            selected: true
+        }, {
+            name: '가성비 좋은',
+            y: 10.38
+        }, {
+            name: '커피맛 좋은',
+            y: 4.77
+        }, {
+            name: '더러운',
+            y: 0.91
+        }, {
+            name: '복잡한',
+            y: 0.2
+        }]
+    }]
+});
+                        </script>
             </div>
         </div>
     </div>

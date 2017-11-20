@@ -34,7 +34,8 @@ async def bns(request):
         'query' : '',
         'range1' : 50,
         'range2' : 50,
-        'range3' : 50
+        'range3' : 50,
+        'result' : {}
     }
 
     # Get Values from request
@@ -46,6 +47,9 @@ async def bns(request):
 
 
     # get results from recommendation module
+    data['result'] = {
+        'attributes' : ['']
+    }
 
     # generate template from result data
     content = await get_template('bns.html', **data)
