@@ -29,6 +29,9 @@ class GraphBasedRecommendation:
         else:
             self.staging_edges[edge_type][u][v] = w
 
+    def remove_edges(self, edge_type=''):
+        self.staging_edges.pop(edge_type)
+
     def add_bi_edge(self, u, v, w=1, edge_type=''):
         self.add_edge(u, v, w=w, edge_type=edge_type)
         self.add_edge(v, u, w=w, edge_type=edge_type)
@@ -99,6 +102,8 @@ def main():
         'neighbors': 0.40
     }
     gbr = GraphBasedRecommendation(edge_weights, pref_weight=0.15, teleport_weight=0.05)
+
+
 
     # Add shop_to_shop relations
     gbr.add_node('신선설농탕', '가맹점')

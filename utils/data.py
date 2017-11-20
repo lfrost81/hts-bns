@@ -76,5 +76,5 @@ if __name__ == '__main__':
             pprint.pprint(csv_link_pairwise(fp, delimiter=',', ofp=ofp))
 
     with open('../data/src-store-to-topic.txt') as fp:
-        with open('../data/store_to_topic.csv', 'w') as ofp:
+        with open('../data/shop_to_topic.csv', 'w') as ofp:
             pprint.pprint(load_and_choice_merchant_pairwise(fp, delimiter=',', ofp=ofp))
