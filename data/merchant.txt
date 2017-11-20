@@ -1,0 +1,605 @@
+name	topic	url
+마키노차야역삼점	점심,저녁,가족,단체,고급진,고가,뷔페,다양,유명한,예약,기념일	*
+고향한식부페	점심,저가,직장인,뷔페,싱글,다양,평일,편안함,매일	*
+(주)아워홈한독약품역사점	점심,한식,직장인,데일리,건강식,매일	*
+초이스출장부페	뷔페,저가,점심,싱글,직장인,편안함	*
+
+아웃백양재점	점심,저녁,가족,연인,단체,고급진,고가,단품,유명한,예약,기념일	*
+빈로이	베트남,점심,저녁,연인,고급진,고가,친절,유명한	*
+매드포갈릭예술의전당점	점심,저녁,가족,연인,고급진,고가,단품,기념일	*
+아웃백교대점	점심,저녁,가족,연인,단체,고급진,고가,단품,유명한,예약,기념일,양식	*
+도미노피자역삼점	배달,가족,편리함,양식	*
+엘투제이뮈렌	점심,저녁,직장인,편안함,저가,양식,숨은,예약	https://store.naver.com/restaurants/detail?id=34739322
+도스타코스본점	점심,저녁,친구,연인,편암함,저가,양식,예약,유명한	https://store.naver.com/restaurants/detail?id=11673307
+매드포갈릭강남점	점심,저녁,가족,연인,고급진,고가,단품,기념일,유명한	*
+한솥도시락	점심,저녁,싱글,저가,단품	*
+쿼터백	저녁,양식,친구,연인,편안함,중저가,친절,단품	https://store.naver.com/restaurants/detail?id=33875330
+포메인강남점	점심,직장인,싱글,저가,친절,베트남	*
+한국카레하우스	점심,일식,싱글,연인,편안함,저가,간편	https://store.naver.com/restaurants/detail?id=13003576,코코이찌방야
+반타이	점심,친구,싱글,연인,직장인,편안함,중저가,평일	*
+겔라포트	저녁,단체,호프,평일,예약,뷔페,숨은	https://store.naver.com/restaurants/detail?id=11578933
+레인보우	저녁,친구,연인,호프,평일,라이브카페	*
+피자아이	배달,평일,간편,양식,저가,가족,친구	https://store.naver.com/restaurants/detail?id=11636108
+아딸장승배기역점	평일,간편,저가,친구	*
+갈릭앤페퍼	평일,저녁,연인,친구,중저가,양식,유명한,기념일,예약	https://store.naver.com/restaurants/detail?id=13282231
+포메인베트남쌀국수	베트남,점심,직장인,저가,친절,유명한	*
+곱창고	저녁,단체,편암함,중저가,주말 	https://store.naver.com/restaurants/detail?id=37108078
+허수하이	점심,숨은,싱글,연인,친구,고급진,중저가,일식	https://store.naver.com/restaurants/detail?id=11736500
+몽817	주말,저녁,직장인,친구,중저가,호프,편안함	https://store.naver.com/restaurants/detail?id=18585347
+모니카	숨은,카페,디저트	*
+고종의아침	저녁,카페,싱글,연인,친구,고급진,편안함,고가	https://store.naver.com/restaurants/detail?id=11886560
+(주)툴쿠아즈	점심,저녁,양식,연인,중저가,숨은	https://store.naver.com/restaurants/detail?id=18329001
+치킨뱅이	저녁,직장인,친구,중저가,호프,편안함	https://store.naver.com/restaurants/detail?id=13375053
+트리아관광호텔	저녁,연인,고급진,고가	*
+매드포갈릭삼성타운점	점심,저녁,가족,연인,고급진,고가,단품,기념일,유명한,예약	*
+술술술닷컴	저녁,직장인,친구,중저가,호프,편안함	*
+아이모나디아	저녁,연인,고급진,중저가,양식,숨은,파스타,기념일	http://map.naver.com/local/siteview.nhn?code=11627083
+사이드웨이레스토랑	저녁,연인,양식,와인,고급	https://store.naver.com/restaurants/detail?id=12020006
+아띠	*	*
+7080별밤	점심,뷔페,친구,편안함,중저가,라이브카페	https://store.naver.com/restaurants/detail?id=18365242
+!우드스탁	저녁,호프,라이브카페,편안함,친구	https://store.naver.com/restaurants/detail?id=35727165
+듀파르	홈메이트,카페,디저트,친구,연인,조용한	https://store.naver.com/restaurants/detail?id=19873194
+작은마을	카페,디저트,친구,연인,숨은	https://store.naver.com/restaurants/detail?id=18365275
+더블린테라스	저녁,연인,호프,양식	https://store.naver.com/restaurants/detail?id=13562677
+마이다스	*	*
+테라스	*	*
+아로마	*	*
+비밥	*	*
+(주)아워홈메리츠타워강남점	점심,한식,직장인,데일리,건강식,매일	*
+요요마의키친	점심,저녁,파스타,고급진,연인,친구,고가,양식,기념일	https://store.naver.com/restaurants/detail?id=21423738
+리틀사이공	점심,유명한,친구,연인,저가,편안함,베트남,평일	https://store.naver.com/restaurants/detail?id=11678464
+금강	*	*
+!에스엠티	저녁,친구,단체,편안함,중저가,다양	https://store.naver.com/restaurants/detail?id=37126470
+맥스패트	숨은,양식,친구	https://store.naver.com/restaurants/detail?id=18358371
+스위트룸	카페,디저트,숨은	https://store.naver.com/restaurants/detail?id=36341167
+베르디	숨은,카페,디저트	https://store.naver.com/restaurants/detail?id=105753829
+리딩하우스	숨은,카페	https://store.naver.com/restaurants/detail?id=13150476
+카라	*	*
+초록나무	저녁,친구,직장인,단체,라이브카페	https://store.naver.com/restaurants/detail?id=18365230
+미엘	점심,저녁,친구,연인,디저트,카페,예약,고급진,고가,파스타,기념일	https://store.naver.com/restaurants/detail?id=13158130
+벨라	숨은,친구,양식	https://store.naver.com/restaurants/detail?id=32258924
+지오	*	*
+보노	*	*
+비틀즈	라이브카페,친구,연인,저녁,편안함,호프	https://store.naver.com/restaurants/detail?id=32464786
+
+한국아트체인	아트샵,미술,공예품,상설	http://map.naver.com/local/siteview.nhn?code=10983435
+(주)대한음악사서초지점	음반,악보,도서	http://map.naver.com/local/siteview.nhn?code=13454887
+두나서점도곡점	서적	http://map.naver.com/local/siteview.nhn?code=18589700
+파고다서점	어학	*
+북메카	미국교과서,어린이	http://map.naver.com/local/siteview.nhn?code=11605875
+연희서적	서적	*
+홍문당서점	오래된,서적	http://map.naver.com/local/siteview.nhn?code=33085530
+한빛지적소유권센터	서적,출판	http://map.naver.com/local/siteview.nhn?code=18396937
+(주)쁘레네에스씨	서적,출판	http://map.naver.com/local/siteview.nhn?code=18313854
+글로벌문화원	어학	*
+삼호책,문구	문구,서적	*
+튼튼영어서초동지사	어학	*
+교대서점	서적	http://map.naver.com/local/siteview.nhn?code=20635446
+(주)컴퍼스미디어	서적,출판	*
+주식회사한글파크	외국인	http://map.naver.com/local/siteview.nhn?code=12910139
+인터내셔날섬유디자인(주)	서적	http://map.naver.com/local/siteview.nhn?code=11641354
+미래엔에듀케어	미국교과서,어린이	http://map.naver.com/local/siteview.nhn?code=13103232
+
+에프샵2	패션,구두	http://map.naver.com/local/siteview.nhn?code=37721316
+에프엠에스	*	*
+팩토리이앤디	*	*
+디에이비강남점	패션,구두	http://map.naver.com/local/siteview.nhn?code=37392617
+정문	*	*
+온풋	구두,패션	*
+아이제이	구두	*
+지코일서울지점	건강,신발	*
+스포츠리퍼블릭(주)	신발,제조	*
+탑스	신발	*
+바이오메카닉스강남지부	*	*
+
+삼통치킨	직장인,홀,치킨,호프	https://store.naver.com/restaurants/detail?id=38590193
+교촌치킨역삼1호점 배달,가족,치킨,호프	https://store.naver.com/restaurants/detail?id=38227811
+강남일미포차	직장인,홀,해산물,호프	https://search.naver.com/search.naver?where=post&sm=tab_jum&query=%EA%B0%95%EB%82%A8%EC%9D%BC%EB%AF%B8%ED%8F%AC%EC%B0%A8
+교촌치킨서초3호점	가족,배달,치킨,호프	https://store.naver.com/restaurants/detail?id=11802221
+던킨도너츠	싱글,친구,테이크아웃,도넛,커피	https://store.naver.com/restaurants/detail?id=36947999
+노랑통닭	직장인,홀,치킨,호프	https://store.naver.com/restaurants/detail?id=37089743
+캐슬프라하	직장인,홀,요리,호프	https://store.naver.com/restaurants/detail?id=11865882
+씨에프바베큐치킨	가족,배달,치킨	https://store.naver.com/restaurants/detail?id=18761258
+bhc비어존	직장인,홀,치킨,호프	*
+비어테라스	친구,연인,홀,단체,요리	https://store.naver.com/restaurants/detail?id=19570059
+!프라자호프	친구,직장인,치킨,호프,홀	https://store.naver.com/restaurants/detail?id=12001833
+하여가	*	*
+멕켄	*	*
+오징어나라	해산물,친구,직장인,홀	https://store.naver.com/restaurants/detail?id=33948904
+서울양꼬치	고기집,친구,직장인,홀	*
+막창뱅크
+비어케이	저녁,점심,친구,호프,홀	https://store.naver.com/restaurants/detail?id=20086671
+야미안
+펀비어킹	저녁,친구,연인,호프,홀	https://store.naver.com/restaurants/detail?id=13375516
+펍뷰
+로젠
+이브로반	점심,저녁,일식,직장인,단체,친구,연인,중저가	https://store.naver.com/restaurants/detail?id=37911021
+이모네포차
+한잔더
+페리카나
+또봉이통닭
+페리카나치킨	친구,직장인,치킨,호프,홀	*
+밀러타임교대삼풍점
+장원집
+서초골뱅이
+명동치킨
+매드후라이트치킨	친구,직장인,치킨,호프,홀	*
+비어덴버
+훌랄라치킨
+동호숯불바베큐
+을지식당
+둘둘치킨스타타워점	친구,직장인,치킨,호프,홀	*
+비어호프
+치킨마루약수터점	친구,직장인,치킨,호프,홀	*
+서원
+투다리
+텀블러비어역삼직영점
+보나베띠	양식,파스타,연인,점심,저녁,친구,중저가	https://store.naver.com/restaurants/detail?id=13063905
+보배네호프
+비어팩토리맥주공장
+조스비어
+쿠캔비어	호프,점심,뷔페,저가,홀	https://store.naver.com/restaurants/detail?id=11833054
+을지로골뱅이와진짜생맥주
+오디
+와바
+플젠교대2호점	*	*
+대성호프	*	*
+세브도르와인바	*	*
+뮤직샤워	*	*
+치킨매니아	*	*
+오션	*	*
+라돌체비타	*	*
+호프을지로골뱅이	*	*
+몽	*	*
+후	*	*
+쵸이	*	*
+카사아지오	*	*
+사또호프치킨	호프,저녁,직장인,단체,홀	https://store.naver.com/restaurants/detail?id=20628065
+미	*	*
+에일코너스역삼본점	*	*
+옥스스모크앤그릴	호프,저녁,직장인,친구,단체,홀	https://store.naver.com/restaurants/detail?id=37127409
+
+써브웨이	써브웨이,싱글,점심,저녁,편안함,편리함	*
+악바리	고기집,점심,저녁,단체,유명한,저가	https://store.naver.com/restaurants/detail?id=11708043
+황토감자탕	한식,점심,직장인,유명한,저가,싱글	https://store.naver.com/restaurants/detail?id=18791776
+샘밭막국수	점심,국수,한식,저가,가족,싱글	https://store.naver.com/restaurants/detail?id=11679536
+호남집	고기집,직장인,저녁,저가	https://store.naver.com/restaurants/detail?id=20625911
+전한강강술래역사점
+명인만두	한식,싱글,점심,저녁,편안함,편리함,저가	https://store.naver.com/restaurants/detail?id=11736128
+명동칼국수	한식,국수,싱글,점심,저녁,편안함,편리함,저가		https://store.naver.com/restaurants/detail?id=18788540
+시골야채된장	한식,직장인,점심,유명한,저가	https://store.naver.com/restaurants/detail?id=11709266
+왕대박감자탕	한식,직장인,연인,친구,저가	https://store.naver.com/restaurants/detail?id=11573083
+참설농탕
+오소산우동
+푸주옥	한시구,싱글,직장인,저가	https://store.naver.com/restaurants/detail?id=19867427
+듬북듬북
+원당뼈다귀감자탕
+명랑시대쌀핫도그강남역점
+김밥천국	분식.점심,친구,싱글,저가	*
+탐라도야지
+마포갈비
+신포우리만두강남점
+가야분식	분식.점심,친구,싱글,저가	*
+백암왕순대	한식,직장인,싱글,저가	https://store.naver.com/restaurants/detail?id=13150484
+서귀포오분작뚝배기
+(주)거북곱창	고기집,유명한,고가	https://store.naver.com/restaurants/detail?id=10984831
+새마을식당
+오발탄
+한방삼계탕
+백철판강남역월드점
+역삼동북어집	한식,직장인,가족,저가	https://store.naver.com/restaurants/detail?id=19873315
+별양집	고기집,유명한,고가	https://store.naver.com/restaurants/detail?id=19872940
+서초버드나무집	고기집,고급진,고가,연인,가족,유명한	https://store.naver.com/restaurants/detail?id=11627634
+황해도찹쌀순대
+원당
+종로김밥
+동래파전
+한촌설렁탕교보타워점
+서초보쌈	한식,직장인,가족,싱글,중저가	https://store.naver.com/restaurants/detail?id=18367103
+식객
+서초사리원
+찬찬찬
+김밥까페
+춘하추동	한식,직장인,저가	https://store.naver.com/restaurants/detail?id=32284479
+남원추어탕
+시골빈대떡
+다동분식
+종료빈대떡	한식,단체,직장인,저가	https://store.naver.com/restaurants/detail?id=20854894
+더짝
+한방대가삼계탕
+풍년집	고기집,직장인,저녁,점심,중저가	https://store.naver.com/restaurants/detail?id=18583473
+봉피양	국수,고기집,직장인,점심,저녁,단체,고급진,고가	https://store.naver.com/restaurants/detail?id=12973914
+정성이가능한최고의밥상
+뻐꾸기
+김밥천국뱅뱅점	한식,점심,저녁,싱글,친구,편안함,편리함,저가	*
+청국장과보리밥	한식,저가,단체,가족		http://map.naver.com/local/siteview.nhn?code=19578423
+순대집
+현대기사식당
+강남대가
+명동곰돌이	친구,숨은,연인,점심,저녁,평일,주말,중저가,국수	https://store.naver.com/restaurants/detail?id=19878202
+본죽교대역g-5점
+옛골
+본가삼계탕
+동경육개장	점심,저녁,친구,직장인,유명한,편안함,저가	https://store.naver.com/restaurants/detail?id=11708527
+맛보리두루치기
+부산양곱창
+월매네주막
+기와집순두부	한식,친구,연인,가족,중저가	https://store.naver.com/restaurants/detail?id=18366711
+원조두부촌
+오니기리와이규동
+김가네
+하늬돈까스
+신정
+종로김밥교대역점	분식.점심,친구,싱글,저가	*
+대학로김가네김밥	분식.점심,친구,싱글,저가	*
+본가강남점	고기집,직장인,연인,단체,점심,저녁,고가,중저가	https://store.naver.com/restaurants/detail?id=11874027
+우면산버드나무집
+팔방에프앤비
+삼보식당
+봉산옥
+썸ING
+신가네솥뚜껑볶음밥	점심,직장인,중저가,유명한	*https://store.naver.com/restaurants/detail?id=11727805
+신선설농탕
+돈정	일식,점심,유명한,가족,직장인,중저가	https://store.naver.com/restaurants/detail?id=11485968
+본죽	한식,점심,저녁,친구,연인,싱글,중저가,편안함,편리함,저가	*
+신의주찹쌀순대강남역점
+손가네
+판문점부대찌개	한식,점심,친구,연인,저가	https://store.naver.com/restaurants/detail?id=18584748
+코스모스
+알부자알요리전문점
+(주)아워홈메리츠타워강남점
+바우골참숯화로구이	한식,직장인,저가,매일	https://store.naver.com/restaurants/detail?id=12986974
+남호식당	한식,점심,직장인,저가,매일	https://store.naver.com/restaurants/detail?id=18396264
+할머니보쌈
+다미	아침,점심,직장인,저가	https://store.naver.com/restaurants/detail?id=21368993
+풍년식당
+명동분식	분식.점심,친구,연인,저가	https://store.naver.com/restaurants/detail?id=18778032
+꼼씨네	해산물,저녁,직장인,저가	https://store.naver.com/restaurants/detail?id=32806300
+점봉산산나물	한식,점심,주말,가족,친구,숨은,저가	https://store.naver.com/restaurants/detail?id=19878442
+토종삼계탕	한식,점심,저녁,직장인,친구,연인,중저가,숨은	https://store.naver.com/restaurants/detail?id=18366140
+한방정통삼계탕	한식,점심,저녁,직장인,친구,연인,중저가	https://store.naver.com/restaurants/detail?id=33875645
+본죽앤비빔밥cafe강남점	한식,점심,저녁,친구,연인,싱글,중저가,편안함,편리함,저가	*
+
+한마음분식	분식,친구,점심,싱글,직장인,편안함,유명한,평일,저가	https://store.naver.com/restaurants/detail?id=18398008
+오무라안	일식,친구,연인,점심,유명한,고급진,고가	https://store.naver.com/restaurants/detail?id=11679379
+바른식탁역삼점	고기집,점심,저녁,단체,직장인,중저가	https://store.naver.com/restaurants/detail?id=37880362
+누들스	친구,싱글,유명한,베트남,중저가	https://store.naver.com/restaurants/detail?id=11609439
+본죽역삼동특허청점	한식,점심,저녁,친구,연인,싱글,중저가,편안함,편리함,저가	https://store.naver.com/restaurants/detail?id=12987590
+한솥미타니야고대역점	한식,점심,저녁,싱글,중저가,편안함,편리함,저가	https://store.naver.com/restaurants/detail?id=19882466
+김가네김밥	한식,점심,저녁,싱글,편안함,편리함,저가	https://store.naver.com/restaurants/detail?id=19981777
+강진수산수산물직판장	저녁,가족,직장인,판안함,중저가	https://store.naver.com/restaurants/detail?id=18398149
+와비사비	점심,저녁,직장인,평일,저가	https://store.naver.com/restaurants/detail?id=18398160
+미시마	일식,점심,적장인,단체,고급진,중저가	https://store.naver.com/restaurants/detail?id=11689544
+(주)태평양일식
+어랑참치	직장인,평일,점심,중저가	https://store.naver.com/restaurants/detail?id=18579446
+신강능경북식당
+오래뜰	고기집,점심,직장인,단체,저가	https://store.naver.com/restaurants/detail?id=18795005
+뜰에서화로구이	고기집,단체,직장인,중저가	https://store.naver.com/restaurants/detail?id=36878780
+(주)동해상사
+대양참치
+비비큐서초3점
+홍도참치
+진수사
+설국	단체,예약,저녁,친구,고급진	https://store.naver.com/restaurants/detail?id=11712205
+미네
+미도참치
+최수사
+스시꼬	일식,주말,저녁,평일,점심,유명한,	https://store.naver.com/restaurants/detail?id=11633994
+유끼노하나
+삼도
+구레스시	일식,친구,점심,저녁,숨은,예약	https://store.naver.com/restaurants/detail?id=33878475
+삼호복집	일식,직장인,점심,주말,친구,예약,숨은	https://store.naver.com/restaurants/detail?id=13516817
+베스트롤
+(주)신태평양일식
+오월분식
+조
+바다마을
+애향
+스미즈	일식,주말,가족,점심,유명한,예약,고가	https://store.naver.com/restaurants/detail?id=19872664
+(주)에도긴
+영덕집
+이학
+해원회집
+바닷가어촌
+우정분식	*
+청록담
+어시장
+미유끼
+(주)도은
+가덕도횟집
+아카사카
+어궁	*
+긴자
+참맛집
+서초참치명가	일식,친구,점심,예약,평일,저녁,중고가	https://store.naver.com/restaurants/detail?id=37555698
+하나
+선비촌
+우도
+(주)최수사	일식,저녁,편안함,저가	https://store.naver.com/restaurants/detail?id=11621268
+이도미
+서울식당	한식,점심,저가	https://store.naver.com/restaurants/detail?id=18591095
+
+파리크라상강남역	카페,저가,베이커리,케잌	https://store.naver.com/restaurants/detail?id=37854794
+(주)파리크라상파리바게뜨카페선릉점	카페,저가,베이커리,홀,케잌	https://store.naver.com/restaurants/detail?id=19406265
+파리바게뜨	카페,저가,베이커리,케잌	https://store.naver.com/restaurants/detail?id=11684196
+파리바게뜨남부터미널점	카페,저가,베이커리,케잌	https://store.naver.com/restaurants/detail?id=11684226
+파리바게드교대2호점	카페,저가,베이커리,케잌	https://store.naver.com/restaurants/detail?id=11684225
+비알코리아(주)강남본점	카페,저가,아이스크림	https://store.naver.com/restaurants/detail?id=11489260
+(주)파리크라상서초아크로비스타점	카페,저가,베이커리,케잌	https://store.naver.com/restaurants/detail?id=11781483
+김영모과자점	카페,저가,베이커리,테이크아웃,케잌,빠띠쉐	https://store.naver.com/restaurants/detail?id=19886404
+뚜레쥬르서초역점	카페,저가,베이커리,케잌	https://store.naver.com/restaurants/detail?id=12995064
+프랑세스과자점	카페,저가,베이커리,테이크아웃,케잌,빠띠쉐	https://store.naver.com/restaurants/detail?id=34461438ㅍㅍㅍㅍㅍ
+던킨도너츠	카페,저가,베이커리	https://store.naver.com/restaurants/detail?id=13395991
+파리바게뜨서초점	카페,저가,베이커리,케잌	https://store.naver.com/restaurants/detail?id=11684236
+파리바게뜨강남대로점	카페,저가,베이커리,케잌	https://store.naver.com/restaurants/detail?id=19809832
+비알코리아(주)던킨도너츠국기원점	카페,저가,베이커리	https://store.naver.com/restaurants/detail?id=12948283
+비알코리아(주)배스킨라빈스서초우성	카페,저가,아이스크림	http://map.naver.com/local/siteview.nhn?code=12971381
+하나	*	*
+파리바게뜨서초중앙	카페,저가,베이커리,케잌	https://store.naver.com/restaurants/detail?id=18320613
+들꽃	*	*
+야쿤코리아(주)강남역점	카페,저가,홀,토스트	https://store.naver.com/restaurants/detail?id=541004534
+(주)브레드가든터미널점	카페,저가,베이커리,테이크아웃	http://map.naver.com/local/siteview.nhn?code=11595041
+라임케익전문점	카페,저가,케잌,테이크아웃	https://store.naver.com/restaurants/detail?id=11609632
+소담떡집	떡집	*
+금잔디떡샵	떡집,케잌	https://store.naver.com/restaurants/detail?id=12018657
+정가네떡집	떡집	https://store.naver.com/restaurants/detail?id=12912230
+복바우	분식,친구	https://store.naver.com/restaurants/detail?id=36368664
+예당떡방	떡집	https://store.naver.com/restaurants/detail?id=11845628
+금미대만대왕카스테라	카페,저가,베이커리,테이크아웃	https://store.naver.com/restaurants/detail?id=112119421
+원앙떡집	떡집	https://store.naver.com/restaurants/detail?id=11634198
+강남분식	분식,친구	https://store.naver.com/restaurants/detail?id=20893144
+떡보의하루강남점	떡집,케잌	https://store.naver.com/restaurants/detail?id=12761011
+의령조청한과	*	*
+떡돌이떡순이	떡집	https://store.naver.com/restaurants/detail?id=13512620
+
+연화산	점심,가족,직장인,고급진,단체,중식,고가	https://store.naver.com/restaurants/detail?id=33752072
+만리성	중식,점심,직장인,편안함,중저가	https://store.naver.com/restaurants/detail?id=18363975
+금문도	중식,점심,단체,편안함,중저가	https://store.naver.com/restaurants/detail?id=18400193
+삼성각	중식,점심,주말,가족,단체,편안함,고가	https://store.naver.com/restaurants/detail?id=18312433
+만강홍	중식,점심,직장인,단체,저가	https://store.naver.com/restaurants/detail?id=32892097
+초선과여포	중식,직장인,단체,주말,점심,저녁,고가	https://store.naver.com/restaurants/detail?id=13149692
+동천홍	중식,숨은,가족,점심,저녁,편안함,중저가	https://store.naver.com/restaurants/detail?id=38276737
+최고집손짬뽕	중식,주말,점심,편안함,중저가	https://store.naver.com/restaurants/detail?id=37891355
+만리향	중식,주말,점심,중저가	https://store.naver.com/restaurants/detail?id=13150663
+첸	중식,직장인,점심,저녁,단체,저가	https://store.naver.com/restaurants/detail?id=18580801
+루안	중식,고급진,고가,가족,연인,유명한	https://store.naver.com/restaurants/detail?id=11712299
+칭진	중식,직장인,주말,편안함,저녁,중저가	https://store.naver.com/restaurants/detail?id=18363960
+취원	중식,주말,점심,친구,가족,저가	https://store.naver.com/restaurants/detail?id=13573765
+리향
+부라문
+(주)선궁
+외백
+다원
+삼선
+채린	중식,중저가,단체,점심,저녁	https://store.naver.com/restaurants/detail?id=12975243
+중국성	*	*
+육천중국요리	*	*
+천용	중식,점심,연인,직장인,중저가	https://store.naver.com/restaurants/detail?id=11621343
+신대흥장	*	*
+남운	중식,점심,직장인,친구,편안함	https://store.naver.com/restaurants/detail?id=13122439
+리샨삼성타운점	중식,평일,저녁,유명한,단체,고급진,고가	https://store.naver.com/restaurants/detail?id=13159767
+매화	중식,가족,편안함,점심,저녁,중저가	https://store.naver.com/restaurants/detail?id=13150537
+태양1호점	*	*
+
+커피빈강남대로점	커피빈,커피	*
+엔제리너스강남교보타워	엔제리너스,커피	*
+커피빈강남에스점	커피빈,커피	*
+커피빈스타타워점	커피빈,커피	*
+커비빈역삼점	커피빈,커피	*
+커피빈차병원점	커피빈,커피	*
+커피빈서초우성점	커피빈,커피	*
+VIN(빈)	커피,커피	*
+파스쿠찌	파스쿠찌,커피	*
+탐앤탐스서초점	탐앤탐스,커피	*
+커피빈교대점	커피빈,커피	*
+도스	커피,저가	*
+카페루카코리아	커피	https://store.naver.com/restaurants/detail?id=20393527
+(주)커피빈코리아서초지파이브점	커피빈,커피
+카페끌라시코	커피,카페,숨은	https://store.naver.com/restaurants/detail?id=11877705
+(주)커피빈코리아강남역142호점	커피빈,커피
+오로오로	커피,카페,숨은	https://store.naver.com/restaurants/detail?id=12822580
+커피빈교대역점	커피빈,커피	*
+라포레	커피,저가	*
+Coffee나무	커피	https://store.naver.com/restaurants/detail?id=21693537
+서울병원종합청사후생시설운영위원회	커피,저가	*
+탐앤탐스역삼2호	탐앤탐스,커피	*
+커피아르케	커피,저가	https://store.naver.com/restaurants/detail?id=36684263
+가비커피	커피,저가	https://store.naver.com/restaurants/detail?id=34358364
+(주)휴세코역삼지점	커피,저가	*
+엔젤리너스커피	엔제리너스,커피	*
+(주)커피빈코리아삼성전자강남사옥	커피빈,커피	*
+파스쿠지	파스쿠지,커피	*
+(주)이남건설	커피,저가	*
+콤마커피	커피,저가	https://store.naver.com/restaurants/detail?id=18776522
+오도레	커피,저가	https://store.naver.com/restaurants/detail?id=38521678
+커피볶는집바오밥나무	커피,카페,디저트,숨은	https://store.naver.com/restaurants/detail?id=11678689
+(주)에취알에스	커피	https://store.naver.com/restaurants/detail?id=12032072
+희차	커피,티	https://store.naver.com/restaurants/detail?id=396576782
+(주)커피빈코리아삼성생명강남사옥점	커피빈,커피	*
+서초다방	커피,저가	https://store.naver.com/restaurants/detail?id=18305710
+(주)커피빈코리아역삼포스틸타워뒷점	커피빈,커피	*
+한성	커피,저가	*
+카페길버트	커피,베이커리,숨은	https://store.naver.com/restaurants/detail?id=711792278
+정남	커피,저가	*
+예향	커피,저가	*
+교대다방	커피,저가	https://store.naver.com/restaurants/detail?id=31777462
+교대커피	커피,저가	*
+엘비스	커피,저가	https://store.naver.com/restaurants/detail?id=18392060
+이브니프	커피,저가	*
+다향	커피,티	https://store.naver.com/restaurants/detail?id=18585312
+가을타는여자카네기	커피,저가	*
+파인힐	커피,저가	*
+루1487	커피,카페,숨은	https://store.naver.com/restaurants/detail?id=19410550
+레인	카페,저가	https://store.naver.com/restaurants/detail?id=20897182
+
+맥도날드강남점	패스트푸드,친구,싱글,편리함,햄버거	*
+KFC서초동	패스트푸드,친구,싱글,편리함,햄버거,치킨	*
+kfc역삼점	패스트푸드,친구,싱글,편리함,햄버거,치킨	*
+비알코리아(주)남부터미널점	카페,저가,아이스크림	*
+미스터피자선릉점	배달,가족,친구,편리함,피자	*
+도미노피자서초점	배달,가족,편리함,양식	*
+파파존스서초점	배달,가족,편리함,양식	*
+도미노피자동서초	배달,가족,편리함,양식	*
+모모스테이크교대점	점심,저녁,친구,연인,저가,양식	https://store.naver.com/restaurants/detail?id=35841661
+리얼시카고피자	배달,가족,친구,편리함,피자	*
+삼풍치킨	배달,가족,편리함,치킨	*
+핫썬비비큐강남역	배달,가족,편리함,치킨	*
+비비큐치킨	배달,가족,치킨,호프	*
+해원아이엔씨	*
+코바코	양식,가족,친구,연인,중저가	https://store.naver.com/restaurants/detail?id=12758657
+미스터로또	*
+처갓집양념치킨	배달,가족,편리함,치킨	*
+그린위치	*
+삼풍치킨역삼점	배달,가족,편리함,치킨	*
+피자스쿨역삼1동점	배달,가족,친구,편리함,피자	*
+스위트밀	*
+뽕뜨락피자엔요치킨	배달,가족,친구,편리함,피자,치킨	*
+정가이가	한식,가족,친구,숨은	https://store.naver.com/restaurants/detail?id=36170760
+둘둘치킨	배달,가족,편리함,치킨	*
+죠샌드위치앤커피	친구,편리함,분식	*
+피자스쿨한티역점	배달,가족,친구,편리함,피자	*
+서초3동점굽네치킨	배달,가족,편리함,치킨	*
+호봉토스트	저가,편리함,분식	*
+
+세븐일레븐서초점	세븐일레븐,편리함,간편	*
+세븐일레븐역삼점8호	세븐일레븐,편리함,간편	*
+gs25서초제일점	gs25,편리함,간편	*
+미니스톱강남센터점	미니스톱,편리함,간편	*
+cj올리브네트웍스역삼점	올리브영,편리함,간편	*
+세븐일레븐양재점	세븐일레븐,편리함,간편	*
+씨유서초대로점	씨유,편리함,간편	*
+gs25강남센터	gs25,편리함,간편	*
+바이더웨이역삼창조	바이더웨이,편리함,간편	*
+미니스톱역삼태극	미니스톱,편리함,간편	*
+cj올리브네트웍스강남파이낸스점	올리브영,편리함,간편	*
+씨유역삼점	씨유,편리함,간편	*
+세븐일레븐역삼10호점	세븐일레븐,편리함,간편	*
+바이더웨이역삼타운	바이더웨이,편리함,간편	*
+세븐일레븐르네상스	세븐일레븐,편리함,간편	*
+cj올리브네트웍스교대점	올리브영,편리함,간편	*
+세븐일레븐	세븐일레븐,편리함,간편	*
+씨유서초남양점	씨유,편리함,간편	*
+gs25지에스타워점	gs25,편리함,간편	*
+세븐일레븐역삼점	세븐일레븐,편리함,간편	*
+gs25역삼2점	gs25,편리함,간편	*
+씨유역삼카이로스점	씨유,편리함,간편	*
+세븐일레븐역삼15호	세븐일레븐,편리함,간편	*
+씨유서초역점	씨유,편리함,간편	*
+세븐일레븐역삼11호	세븐일레븐,편리함,간편	*
+gs25역삼혜성점	gs25,편리함,간편	*
+씨유선릉디오빌점	씨유,편리함,간편	*
+gs25서초예전점	gs25,편리함,간편	*
+씨유서초골드로즈점	씨유,편리함,간편	*
+gs25역삼대홍점	gs25,편리함,간편	*
+cj올리브네트웍스남부터미널점	올리브영,편리함,간편	*
+씨유삼풍중앙점	씨유,편리함,간편	*
+cj올리브네트워스양재2호점	올리브영,편리함,간편	*
+세븐일레븐역삼점5호	세븐일레븐,편리함,간편	*
+씨유역삼유토빌점	씨유,편리함,간편	*
+gs25역삼넥스빌점	gs25,편리함,간편	*
+씨유역삼경복점	씨유,편리함,간편	*
+(주)바이더웨이역삼은탑점	바이더웨이,편리함,간편	*
+바이더웨이역삼명랑	바이더웨이,편리함,간편	*
+세븐일레븐강남역TGI점	세븐일레븐,편리함,간편	*
+씨유역삼푸르지오점	씨유,편리함,간편	*
+씨유서초프라임점	씨유,편리함,간편	*
+서초이오빌점	마트,편리함,간편	*
+gs25강남쌍용점	gs25,편리함,간편	*
+gs25역삼덕원	gs25,편리함,간편	*
+씨유풍림플러스점	씨유,편리함,간편	*
+씨유서초청도점	씨유,편리함,간편	*
+세븐일레븐한신점	세븐일레븐,편리함,간편	*
+씨유역삼건화점	씨유,편리함,간편	*
+씨유남부터미널역점	씨유,편리함,간편	*
+gs25서초브라운점	gs25,편리함,간편	*
+gs25서초법원점	gs25,편리함,간편	*
+세븐일레븐역삼14호점	세븐일레븐,편리함,간편	*
+세븐일레븐역삼점17호	세븐일레븐,편리함,간편	*
+바이더웨이역삼포은점	바이더웨이,편리함,간편	*
+네오마트	마트,편리함,간편	*
+gs25강남타운점	gs25,편리함,간편	*
+미니스톱역삼상록	미니스톱,편리함,간편	*
+gs25서초서일점	gs25,편리함,간편	*
+(주)세븐일레븐방배효령점	세븐일레븐,편리함,간편	*
+세븐일레븐역삼프레스티지점	세븐일레븐,편리함,간편	*
+gs25서초디오빌점	gs25,편리함,간편	*
+아이지에이서초레몬	마트,편리함,간편	*
+씨유역삼본점	씨유,편리함,간편	*
+씨유역삼한서점	씨유,편리함,간편	*
+씨유서초현대렉시온점	씨유,편리함,간편	*
+씨유역삼화랑점	씨유,편리함,간편	*
+씨유역삼로즈점	씨유,편리함,간편	*
+세븐일레븐역삼해피점	세븐일레븐,편리함,간편	*
+씨유큐브플러스점	씨유,편리함,간편	*
+cj올리브네트워스강남대로점	올리브영,편리함,간편	*
+웰빙마트	마트,편리함,간편	*
+
+하이리빙	생필품,화장품,어린이	*
+아리따움강남역지하점	아리따움,화장품	*
+토니모리강남점	토니모리,화장품	*
+주식회사비에스케이코퍼레이션	화장품	*
+더샘강남역점	더샘,화장품	*
+더샘강남지하상가	더샘,화장품	*
+(주)우리코스메틱	더샘,화장품	*
+아리따움한티역점	아리따움,화장품	*
+유알지	화장품,향수	http://map.naver.com/local/siteview.nhn?code=13574644
+다판다	건강보조식품	http://map.naver.com/local/siteview.nhn?code=37891662
+다이타네일예진미인	화장품	*
+사틴헤어대치도곡점	헤어샵	*
+제네틱상사	화장품,향수	*
+미소인	피부관리	*
+(주)아주의대벤처메딕	피부관리	*
+수에스테틱	피부관리	http://map.naver.com/local/siteview.nhn?code=12886791
+두피탈모WT메소드	탈모관리	http://map.naver.com/local/siteview.nhn?code=11817604
+아름다운나라에스테틱	피부관리	http://map.naver.com/local/siteview.nhn?code=13550633
+에이블씨엔씨어퓨연신내점	화장품,향수	http://map.naver.com/local/siteview.nhn?code=12310172
+주식회사모델로	*	*
+NewYorkNailSal&Acad	네일	http://map.naver.com/local/siteview.nhn?code=11604501
+미르필코리아	*	*
+캐사랑	*	*
+강남에스테틱	*	*
+비프루브강남역점	화장품,향수	http://map.naver.com/local/siteview.nhn?code=187090957
+세라네	화장품,향수	http://map.naver.com/local/siteview.nhn?code=12793950
+한독양행	*	*
+엘에이취에스테틱	피부관리	*
+아모레퍼시픽뷰레이터	화장품	*
+예인에스테틱	피부관리	*
+Y-SPA	피부관리	http://map.naver.com/local/siteview.nhn?code=12992584
+서초화장품	화장품	*
+서초건강생활	생필품,화장품	*
+태평양뷰레이터	화장품	http://map.naver.com/local/siteview.nhn?code=18395380
+아일글로벌	화장품	http://map.naver.com/local/siteview.nhn?code=13348510
+한마음니트	*	*
+삼성건강생활	생필품,화장품	*
+쎄일쎄일화장품	*	*
+김수연뷰티캐슬	피부관리	http://map.naver.com/local/siteview.nhn?code=1596982562
+미광수	피부관리	*
+우먼센스	피부관리	*
+유니통상	*	*
+이엘씨에이한국	화장품	http://map.naver.com/local/siteview.nhn?code=548064335
+아모레외판원	화장품	*
+아모레	화장품	*
+누벨에스테틱시스템	피부관리	*
+하랑	*	*
+요술공주	*	*
+랑카	기능성,화장품	http://map.naver.com/local/siteview.nhn?code=19737504
+주노통상	화장품,향수	http://map.naver.com/local/siteview.nhn?code=21040538
+안나에스테틱	피부관리	http://map.naver.com/local/siteview.nhn?code=35215234
+고려생약서울지사	*	*
+헬렌케이	*	*
+아모레피시픽교대영업소	화장품	*
+아나공방	귀금속,시계	*
+오브리코리아	*	*
+데이스파로즈	*	*
+스킨	피부관리	*	*
+우리한방화장품교대지사	화장품,기능성	*
+화장공간	메이크업	http://map.naver.com/local/siteview.nhn?code=18582520
+스파루체	피부관리	http://map.naver.com/local/siteview.nhn?code=724000389
+뷰테크	*	*
+샘(sam)	*	*
+에스에이치컴퍼니	*	*
+블루그린알지(서초점)	*	*
+현프로	메이크업	http://map.naver.com/local/siteview.nhn?code=12977401
+블렌치	피부관리	http://map.naver.com/local/siteview.nhn?code=12946517
+뷰티플러스	피부관리	http://map.naver.com/local/siteview.nhn?code=426123828
+베로니카	*	*
