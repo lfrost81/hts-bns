@@ -75,6 +75,6 @@ class TestRecommendIndex(TestCase):
         }
 
         result = self.ri.recommend_processor(data)
-        pprint.pprint(result)
+        # pprint.pprint(result)
 
         self.assertEqual(result['shop'][0][0], '커피빈강남대로점')
