@@ -19,6 +19,9 @@ class GraphBasedRecommendation:
         self.staging_edges = dict()
 
     def add_node(self, name, node_type=''):
+        if name in self.g:
+            return
+
         self.g.add_node(name, t=node_type)
 
     def add_edge(self, u, v, w=1, edge_type=''):
@@ -28,6 +31,10 @@ class GraphBasedRecommendation:
             self.staging_edges[edge_type][u] = {v: w}
         else:
             self.staging_edges[edge_type][u][v] = w
+
+    def remove_edges(self, edge_type=''):
+        if edge_type in self.staging_edges:
+            self.staging_edges.pop(edge_type)
 
     def add_bi_edge(self, u, v, w=1, edge_type=''):
         self.add_edge(u, v, w=w, edge_type=edge_type)
@@ -59,17 +66,26 @@ class GraphBasedRecommendation:
         personalization = self.__normalize_personalization(personalization)
 
         # Scaling for weights
+        merged_edges = {}
         for k1, v1 in self.staging_edges.items():
             weight = self.edge_weights[k1]
             for k2, v2 in v1.items():
                 base = sum(v2.values())
                 for k3, v3 in v2.items():
                     v2[k3] = v3 / base * weight
-                    self.g.add_edge(k2, k3, w=v2[k3])
+                    if k2 not in merged_edges:
+                        merged_edges[k2] = {}
+                    if k3 not in merged_edges[k2]:
+                        merged_edges[k2][k3] = 0
+                    merged_edges[k2][k3] += v2[k3]
+
+        for u, vs in merged_edges.items():
+            for v, w in vs.items():
+                self.g.add_edge(u, v, w=w)
 
         # Calculate pagerank
-        pr = nx.pagerank(self.g, 1 - (self.pref_weight + self.teleport_weight),
-                         weight='w', personalization=personalization, max_iter=1000, tol=0.1)
+        pr = nx.pagerank(self.g, alpha=1 - (self.pref_weight + self.teleport_weight),
+                         weight='w', personalization=personalization, max_iter=100000)
 
         # Formatting result
         result = dict()
@@ -134,13 +150,10 @@ def main():
     gbr.add_bi_edge('신선설농탕', '합리적인', 1, 'shop_to_topic')
     gbr.add_bi_edge('스타벅스', '고급스러운', 1, 'shop_to_topic')
     gbr.add_bi_edge('이디야', '합리적인', 1, 'shop_to_topic')
-    gbr.add_bi_edge('탐앤탐스', '고급스러운', 1, 'shop_to_topic')
     gbr.add_bi_edge('탐앤탐스', '합리적인', 1, 'shop_to_topic')
 
     personalization = {
-        '신선설농탕': 1,
-        '탐앤탐스': 1,
-        '스타벅스': 3
+        '고급스러운': 1
     }
     pr = gbr.fit_predict(personalization)
 
@@ -163,5 +176,5 @@ def main():
         plt.show()
 
 if __name__ == '__main__':
-    matplotlib.rc('font', family='Malgun Gothic')
+    matplotlib.rc('font', family='AppleGothic')
     main()

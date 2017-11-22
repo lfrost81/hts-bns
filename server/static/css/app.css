@@ -11,5 +11,7 @@
     height : 5px;
 }
 
-div.card-header {
+.card-header {
+    padding: 6px 12px;
 }
+
