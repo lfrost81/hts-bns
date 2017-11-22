@@ -36,7 +36,8 @@ def main():
         s += fta.get_src('integrated_network', 900, 500)
         s += '\n'
         s += fta.get_src('integrated_network', 900, 500,
-                         filter_col='col0', filters=['커피빈강남대로점', '엔제리너스강남교보타워'])
+                         filter_col='col0', filters=['커피빈강남대로점', '빈로이', '직장인', '점심', '커피'])
+
         s += '\n'
         s += fta.get_src('shop_to_shop', 900, 500,
                          filter_col='col1', filters=['커피빈강남대로점', '엔제리너스강남교보타워'])
