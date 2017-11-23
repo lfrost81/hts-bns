@@ -1,9 +1,12 @@
 import sys
 
 from sanic import Sanic
-from sanic.response import json, html
+from sanic.response import json as sanic_json, html
+import json
 
 from jinja2 import Environment, PackageLoader, select_autoescape
+
+from recommendation import RecommendIndex
 
 env = Environment(
     loader=PackageLoader('app', 'templates'),
@@ -20,10 +23,22 @@ async def get_template(tpl, **kwargs):
 app = Sanic(__name__)
 app.static('/static', './static')
 
+ri = RecommendIndex()
+ri_main_path = '../data'
+
+import os
+path = os.getcwd()
+
+ri.index(
+    '../data/shop_to_shop.csv',
+    '../data/shop_to_topic.csv'
+)
+
+
 
 @app.route("/")
 async def root(request):
-    return json({"bns root": "test"})
+    return sanic_json({"bns root": "test"})
 
 
 @app.route("/bns")
@@ -32,24 +47,31 @@ async def bns(request):
     # default
     data = {
         'query' : '',
-        'range1' : 50,
-        'range2' : 50,
-        'range3' : 50,
-        'result' : {}
+        'result' : {},
+        'weights': {'shop_to_shop': 10, 'shop_to_topic': 30, 'neighbors': 60}
     }
 
     # Get Values from request
     if request.raw_args:
         data['query'] = request.raw_args['query']
-        data['range1'] = int(request.raw_args['relation'])
-        data['range2'] = int(request.raw_args['attribute'])
-        data['range3'] = int(request.raw_args['following'])
+        shop_to_shop = int(request.raw_args['shop_to_shop'])
+        shop_to_topic = int(request.raw_args['shop_to_topic'])
+        neighbors = int(request.raw_args['neighbors'])
+
+        data.update(json.loads(data['query']))
+        data.update( {
+            'weights': {'shop_to_shop': shop_to_shop, 'shop_to_topic': shop_to_topic, 'neighbors': neighbors}
+        } )
 
 
     # get results from recommendation module
-    data['result'] = {
-        'attributes' : ['']
-    }
+    data['result'] = ri.recommend_processor(data)
+
+    # data reorganization
+    data['result']['shopname_list'] = [ shop_unit[0] for shop_unit in data['result']['shop'] ]
+    data['result']['shopweight_list'] = [ shop_unit[1] for shop_unit in data['result']['shop'] ]
+
+    data['result']['topic_list'] = [ {'name':topic_unit[0], 'y':topic_unit[1]} for topic_unit in data['result']['topic'] ]
 
     # generate template from result data
     content = await get_template('bns.html', **data)

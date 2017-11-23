@@ -3,4 +3,4 @@ jinja2
 
 numpy
 matplotlib
-networkx
+networkx==1.11

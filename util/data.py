@@ -18,8 +18,10 @@ def json_link_pairwise(forward_dict, delimiter=',', ofp=None):
 
 
 def csv_link_pairwise(fp, delimiter=',', ofp=None):
-    result = []
+    if ofp is not None:
+        ofp.write('u,v,w' + ' \n')
 
+    result = []
     df = pd.read_csv(fp, index_col=0, header=0)
     df = df.fillna(0)
     for k, v in df.items():
@@ -35,8 +37,10 @@ def csv_link_pairwise(fp, delimiter=',', ofp=None):
 
 
 def load_and_choice_merchant_pairwise(fp, delimiter=',', ofp=None):
-    result = []
+    if ofp is not None:
+        ofp.write('u,v,w' + ' \n')
 
+    result = []
     reader = csv.reader(fp, delimiter='\t')
     choices = {}
     for row in reader:
@@ -55,7 +59,8 @@ def load_and_choice_merchant_pairwise(fp, delimiter=',', ofp=None):
 
     return result
 
-if __name__ == '__main__':
+
+def main():
     d = {
         '아리따움': {
             '미니스톱': 100,
@@ -78,3 +83,7 @@ if __name__ == '__main__':
     with open('../data/src-store-to-topic.txt') as fp:
         with open('../data/shop_to_topic.csv', 'w') as ofp:
             pprint.pprint(load_and_choice_merchant_pairwise(fp, delimiter=',', ofp=ofp))
+
+
+if __name__ == '__main__':
+    main()
