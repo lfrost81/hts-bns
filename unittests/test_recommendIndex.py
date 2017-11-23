@@ -59,7 +59,7 @@ class TestRecommendIndex(TestCase):
 
         print('After steal competitor\'s sale')
         neighbors = {
-            '커피빈강남대로점': [ 'CJ올리브네트웍스역삼점', '빈로이', '봉피양' ]
+            '커피빈강남대로점': ['CJ올리브네트웍스역삼점', '빈로이', '봉피양']
         }
         result = self.ri.recommend(edge_weights, personalization, neighbors)
         pprint.pprint(result)
