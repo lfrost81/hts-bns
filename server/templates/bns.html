@@ -86,7 +86,7 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="input-group form-group">
-                                    <span class="input-group-addon" id="sizing-addon1">행위</span>
+                                    <span class="input-group-addon" id="sizing-addon1"><b>행위</b></span>
                                     <input type="text" class="form-control form-control-lg" name="behaviors" id="behaviors" placeholder="방문 가맹점 (ex) {'커피빈강남대로점': 10, '빈로이': 20}" value='{{behaviors_json|safe}}'/>
                                     <!--span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="location.href='/?query='+document.getElementById('query').value;">Search!</button></span-->
                                 </div>
@@ -110,7 +110,7 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="input-group form-group">
-                                    <span class="input-group-addon" id="sizing-addon2">태그</span>
+                                    <span class="input-group-addon" id="sizing-addon2"><b>태그</b></span>
                                     <input type="text" class="form-control form-control-lg" name="tendencies" id="tendencies" placeholder="태그 (ex) ['커피', '점심', '직장인', '저가']" value='{{tendencies_json|safe}}'/>
                                     <!--span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="location.href='/?query='+document.getElementById('query').value;">Search!</button></span-->
                                 </div>
@@ -134,7 +134,7 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="input-group form-group">
-                                    <span class="input-group-addon" id="sizing-addon3">이웃</span>
+                                    <span class="input-group-addon" id="sizing-addon3"><b>이웃</b></span>
                                     <input type="text" class="form-control form-control-lg" name="neighbors" id="neighbors" placeholder="1촌 (ex) {'커피빈강남대로점': ['봉피양', '빈로이', 'CJ올리브네트웍스역삼점']} " value='{{neighbors_json|safe}}'/>
                                     <!--span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="location.href='/?query='+document.getElementById('query').value;">Search!</button></span-->
                                 </div>
@@ -159,7 +159,7 @@
                 </div>
                 <div class="row" style="padding: 15px">
                     <div class="col-12">
-                        <center><button class="btn btn-dark btn-large" style="width:500px; height:50px" id="search_button" type="button" onclick="checkAndMove();"><h4>Recommend</h4></button></center>
+                        <center><button class="btn btn-dark btn-large" style="width:400px; height:50px" id="search_button" type="button" onclick="checkAndMove();"><h4>Recommend</h4></button></center>
                     </div>
                 </div>
             </form>
