@@ -45,7 +45,7 @@ class RecommendIndex:
             for row in rows:
                 self.gbr.add_node(row['v'], 'topic')
             for row in rows:
-                self.gbr.add_bi_edge(row['u'], row['v'], 1, 'shop_to_topic')
+                self.gbr.add_bi_edge(row['u'], row['v'], float(row['w']), 'shop_to_topic')
 
     def recommend(self, edge_weights, personalization={}, neighbors={}):
         """
