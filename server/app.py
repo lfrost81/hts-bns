@@ -67,6 +67,12 @@ async def bns(request):
     # get results from recommendation module
     data['result'] = ri.recommend_processor(data)
 
+    # data reorganization
+    data['result']['shopname_list'] = [ shop_unit[0] for shop_unit in data['result']['shop'] ]
+    data['result']['shopweight_list'] = [ shop_unit[1] for shop_unit in data['result']['shop'] ]
+
+    data['result']['topic_list'] = [ {'name':topic_unit[0], 'y':topic_unit[1]} for topic_unit in data['result']['topic'] ]
+
     # generate template from result data
     content = await get_template('bns.html', **data)
     return content

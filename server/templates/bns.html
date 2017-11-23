@@ -161,18 +161,7 @@
         text: ' from HyundaiCard transaction data'
     },
     xAxis: {
-        categories: [
-            '커피빈',
-            'GS25',
-            '스타벅스',
-            '전광수커피',
-            '이디야',
-            '콩심 콩나물국밥',
-            '놀부 부대찌게',
-            '강남 CGV',
-            '블루밍 가든',
-            '지오다노'
-        ],
+        categories: {{result.shopname_list}},
         crosshair: true
     },
     yAxis: {
@@ -197,7 +186,7 @@
     },
     series: [{
         name: '연관비율',
-        data: [32.8, 21.6, 13.2, 10.8, 8.5, 6.13, 5.34, 2.11, 1.09, 1.08]
+        data: {{result.shopweight_list}}
 
     }]
 });
@@ -243,27 +232,7 @@
     series: [{
         name: 'Brands',
         colorByPoint: true,
-        data: [{
-            name: '이야기하기 좋은',
-            y: 56.33
-        }, {
-            name: '편안한',
-            y: 24.03,
-            sliced: true,
-            selected: true
-        }, {
-            name: '가성비 좋은',
-            y: 10.38
-        }, {
-            name: '커피맛 좋은',
-            y: 4.77
-        }, {
-            name: '더러운',
-            y: 0.91
-        }, {
-            name: '복잡한',
-            y: 0.2
-        }]
+        data: {{result.topic_list}}
     }]
 });
                         </script>
