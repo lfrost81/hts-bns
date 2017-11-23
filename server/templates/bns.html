@@ -20,9 +20,9 @@
         function checkAndMove() {
             url = "/bns?";
             url += "query=" + $("#query").val();
-            url += "&relation=" + $("#range1").val();
-            url += "&attribute=" + $("#range2").val();
-            url += "&following=" + $("#range3").val();
+            url += "&shop_to_shop=" + $("#shop_to_shop").val();
+            url += "&shop_to_topic=" + $("#shop_to_topic").val();
+            url += "&neighbors=" + $("#neighbors").val();
 
             window.location = url;
         }
@@ -92,7 +92,7 @@
             <div class="row">
                 <div class="col-8">
                 <span class="align-middle">
-                    <input type="range" name="range1" min="1" max="100" value="{{range1}}" class="slider" id="range1">
+                    <input type="range" name="shop_to_shop" min="1" max="100" value="{{weights.shop_to_shop}}" class="slider" id="shop_to_shop">
                 </span>
                 </div>
                 <div class="col-4">
@@ -100,7 +100,7 @@
                         <center>연관매출 : <span id="value1"></span>%</center>
                     </button>
                 </div>
-                <script>change_bar_value("range1", "value1");</script>
+                <script>change_bar_value("shop_to_shop", "value1");</script>
             </div>
         </div>
 
@@ -109,7 +109,7 @@
             <div class="row">
                 <div class="col-8">
                     <span class="align-middle">
-                        <input type="range" name="range2" min="1" max="100" value="{{range2}}" class="slider" id="range2">
+                        <input type="range" name="shop_to_topic" min="1" max="100" value="{{weights.shop_to_topic}}" class="slider" id="shop_to_topic">
                     </span>
                 </div>
                 <div class="col-4">
@@ -117,7 +117,7 @@
                         <center>성향 : <span id="value2"></span>%</center>
                     </button>
                 </div>
-                <script>change_bar_value("range2", "value2");</script>
+                <script>change_bar_value("shop_to_topic", "value2");</script>
             </div>
         </div>
 
@@ -126,7 +126,7 @@
             <div class="row">
                 <div class="col-8">
                     <span class="align-middle">
-                        <input type="range" name="range3" min="1" max="100" value="{{range3}}" class="slider" id="range3">
+                        <input type="range" name="neighbors" min="1" max="100" value="{{weights.neighbors}}" class="slider" id="neighbors">
                     </span>
                 </div>
                 <div class="col-4">
@@ -134,7 +134,7 @@
                         <center>1촌 : <span id="value3"></span>%</center>
                     </button>
                 </div>
-                <script>change_bar_value("range3", "value3");</script>
+                <script>change_bar_value("neighbors", "value3");</script>
             </div>
         </div>
     </div>
