@@ -35,10 +35,11 @@ ri.index(
     '../data/shop_to_topic.csv'
 )
 
-DEFAULT_STS = 10
-DEFAULT_STT = 30
-DEFAULT_N= 60
-RESULT_SIZE = 10
+DEFAULT_STS = 100
+DEFAULT_STT = 0
+DEFAULT_N= 0
+
+RESULT_SIZE = 5
 
 @app.route("/")
 async def root(request):
@@ -50,7 +51,9 @@ async def bns(request):
 
     # default
     data = {
-        'query' : '',
+        'behaviors' : {},
+        'tendencies' : [],
+        'neighbors' : {},
         'result' : {},
         'weights': {'shop_to_shop': DEFAULT_STS, 'shop_to_topic': DEFAULT_STT, 'neighbors': DEFAULT_N}
     }
@@ -60,15 +63,38 @@ async def bns(request):
 
     # Get Values from request
     if request.raw_args:
-        data['query'] = request.raw_args.get('query', '{}')
+        """
+        sample json
+        {
+            'behaviors': {'커피빈강남대로점': 10, '빈로이': 20},
+            'tendencies': ['커피', '점심', '직장인', '저가'],
+            'neighbors': {'커피빈강남대로점': ['봉피양', '빈로이', 'CJ올리브네트웍스역삼점']},
+            'weights': {'shop_to_shop': 0.1, 'shop_to_topic': 0.3, 'neighbors': 0.6}
+        }
+        """
+        data['behaviors'] = json.loads(request.raw_args.get('behaviors', '{}'))
+        data['behaviors_json'] = json.dumps(data['behaviors'], ensure_ascii=False)
+        data['tendencies'] = json.loads(request.raw_args.get('tendencies', '[]'))
+        data['tendencies_json'] = json.dumps(data['tendencies'], ensure_ascii=False)
+        data['neighbors'] = json.loads(request.raw_args.get('neighbors', '{}'))
+        data['neighbors_json'] = json.dumps(data['neighbors'], ensure_ascii=False)
+
         shop_to_shop = int(request.raw_args.get('shop_to_shop', DEFAULT_STS))
         shop_to_topic = int(request.raw_args.get('shop_to_topic', DEFAULT_STT))
-        neighbors = int(request.raw_args.get('neighbors', DEFAULT_N))
+        neighbor_weight = int(request.raw_args.get('neighbor_weight', DEFAULT_N))
 
-        data['query_json'] = json.loads(data['query'])
-        data.update(json.loads(data['query']))
+        if not data['behaviors'] and not data['tendencies'] and not data['neighbors']:
+            shop_to_shop = 100
+            shop_to_topic = 0
+            neighbor_weight = 0
+        else:
+            shop_to_shop = 10
+            shop_to_topic = 30
+            neighbor_weight = 60
+
+
         data.update( {
-            'weights': {'shop_to_shop': shop_to_shop, 'shop_to_topic': shop_to_topic, 'neighbors': neighbors}
+            'weights': {'shop_to_shop': shop_to_shop, 'shop_to_topic': shop_to_topic, 'neighbors': neighbor_weight}
         } )
 
 
@@ -79,12 +105,26 @@ async def bns(request):
 
     # generate iframe html from google fusion table
     fta = FusionTableAgent()
-    filter_key = [ x for x in data['query_json']['behaviors'].keys() ]
-    filter_key.extend(data['query_json']['tendencies'])
+    behavior_key = [ behavior for behavior in data['behaviors'].keys() ]
+    filter_key = behavior_key + data['tendencies']
 
-    data['result']['network'] = fta.get_src(
+    if not filter_key:
+        filter_key=None
+
+    if not behavior_key:
+        behavior_key=None
+
+    data['result']['integrated_network'] = fta.get_src(
         'integrated_network', width, height,
         filter_col='col0', filters=filter_key)
+
+    data['result']['shop_to_shop_network'] = fta.get_src(
+        'shop_to_shop', width, height,
+        filter_col='col1', filters=behavior_key)
+
+    data['result']['shop_to_topic_network'] = fta.get_src(
+        'shop_to_topic', width, height,
+        filter_col='col0', filters=behavior_key)
 
     data['result']['shop_location'] = fta.get_src('shop_location', width, height)
 

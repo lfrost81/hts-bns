@@ -19,10 +19,12 @@
     <script>
         function checkAndMove() {
             url = "/bns?";
-            url += "query=" + $("#query").val();
+            url += "behaviors=" + unescape($("#behaviors").val());
+            url += "&tendencies=" + $("#tendencies").val();
+            url += "&neighbors=" + $("#neighbors").val();
             url += "&shop_to_shop=" + $("#shop_to_shop").val();
             url += "&shop_to_topic=" + $("#shop_to_topic").val();
-            url += "&neighbors=" + $("#neighbors").val();
+            url += "&neighbor_weight=" + $("#neighbor_weight").val();
 
             window.location = url;
         }
@@ -48,8 +50,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="/bns">
-            <img src="/static/images/logo_header.png" class="pr-10">&nbsp;&nbsp;&nbsp;&nbsp;
-            Business Network Service
+            <img src="/static/images/logo_header.png">&nbsp;
+            <img src="/static/images/HTG_logo-crop.png">&nbsp;&nbsp;&nbsp;&nbsp;
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,7 +59,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Customer Simulator
+                    <a class="nav-link" href="#">Business Network Service - Customer Simulator
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -74,78 +76,104 @@
 
 <!-- Page Content -->
 <div class="container-fluid">
-    <div class="row" style="padding-top:30px; background-color:#E0E0E0">
+    <br/>
+    <div class="row" style="padding:15px 0 15px;">
         <!-- left layout -->
         <div class="col-12">
             <form name="bnsform" class="form" onSubmit="checkAndMove();">
-                <div class="input-group form-group">
-                    <input type="text" class="form-control form-control-lg" name="query" id="query" placeholder="store(가맹점,방문횟수), attr(성향,가중치), relation(from가맹점,to가맹점)" value='{{query.strip()}}'/>
-                    <!--span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="location.href='/?query='+document.getElementById('query').value;">Search!</button></span-->
-                    <span class="input-group-btn"><button class="btn btn-secondary btn-large" id="search_button" type="button" onclick="checkAndMove();">Recommend</button></span>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="input-group form-group">
+                                    <span class="input-group-addon" id="sizing-addon1"><b>행위</b></span>
+                                    <input type="text" class="form-control form-control-lg" name="behaviors" id="behaviors" placeholder="방문 가맹점 (ex) {'커피빈강남대로점': 10, '빈로이': 20}" value='{{behaviors_json|safe}}'/>
+                                    <!--span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="location.href='/?query='+document.getElementById('query').value;">Search!</button></span-->
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <span class="align-middle">
+                                            <input type="range" name="shop_to_shop" min="0" max="100" value="{{weights.shop_to_shop}}" class="slider" id="shop_to_shop">
+                                        </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-primary disabled col-12">
+                                            <center>연관매출 : <span id="value1"></span>%</center>
+                                        </button>
+                                    </div>
+                                    <script>change_bar_value("shop_to_shop", "value1");</script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="input-group form-group">
+                                    <span class="input-group-addon" id="sizing-addon2"><b>태그</b></span>
+                                    <input type="text" class="form-control form-control-lg" name="tendencies" id="tendencies" placeholder="태그 (ex) ['커피', '점심', '직장인', '저가']" value='{{tendencies_json|safe}}'/>
+                                    <!--span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="location.href='/?query='+document.getElementById('query').value;">Search!</button></span-->
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-8">
+                    <span class="align-middle">
+                        <input type="range" name="shop_to_topic" min="0" max="100" value="{{weights.shop_to_topic}}" class="slider" id="shop_to_topic">
+                    </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-danger disabled col-12">
+                                            <center>연관태그 : <span id="value2"></span>%</center>
+                                        </button>
+                                    </div>
+                                    <script>change_bar_value("shop_to_topic", "value2");</script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="input-group form-group">
+                                    <span class="input-group-addon" id="sizing-addon3"><b>이웃</b></span>
+                                    <input type="text" class="form-control form-control-lg" name="neighbors" id="neighbors" placeholder="1촌 (ex) {'커피빈강남대로점': ['봉피양', '빈로이', 'CJ올리브네트웍스역삼점']} " value='{{neighbors_json|safe}}'/>
+                                    <!--span class="input-group-btn"><button class="btn btn-secondary" id="search_button" type="button" onclick="location.href='/?query='+document.getElementById('query').value;">Search!</button></span-->
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-8">
+                    <span class="align-middle">
+                        <input type="range" name="neighbor_weight" min="0" max="100" value="{{weights.neighbors}}" class="slider" id="neighbor_weight">
+                    </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-dark disabled col-12">
+                                            <center>1촌 : <span id="value3"></span>%</center>
+                                        </button>
+                                    </div>
+                                    <script>change_bar_value("neighbor_weight", "value3");</script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding: 15px">
+                    <div class="col-12">
+                        <center><button class="btn btn-dark btn-large" style="width:400px; height:50px" id="search_button" type="button" onclick="checkAndMove();"><b>Recommend</b></button></center>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
 
-    <div class="row" style="padding-bottom:30px; background-color:#E0E0E0">
-        <div class="col-4">
-            <div class="row">
-                <div class="col-8">
-                <span class="align-middle">
-                    <input type="range" name="shop_to_shop" min="0" max="100" value="{{weights.shop_to_shop}}" class="slider" id="shop_to_shop">
-                </span>
-                </div>
-                <div class="col-4">
-                    <button type="button" class="btn btn-primary disabled col-12">
-                        <center>연관매출 : <span id="value1"></span>%</center>
-                    </button>
-                </div>
-                <script>change_bar_value("shop_to_shop", "value1");</script>
-            </div>
-        </div>
-
-        <!-- attribute button -->
-        <div class="col-4">
-            <div class="row">
-                <div class="col-8">
-                    <span class="align-middle">
-                        <input type="range" name="shop_to_topic" min="0" max="100" value="{{weights.shop_to_topic}}" class="slider" id="shop_to_topic">
-                    </span>
-                </div>
-                <div class="col-4">
-                    <button type="button" class="btn btn-danger disabled col-12">
-                        <center>성향 : <span id="value2"></span>%</center>
-                    </button>
-                </div>
-                <script>change_bar_value("shop_to_topic", "value2");</script>
-            </div>
-        </div>
-
-        <!-- following button -->
-        <div class="col-4">
-            <div class="row">
-                <div class="col-8">
-                    <span class="align-middle">
-                        <input type="range" name="neighbors" min="0" max="100" value="{{weights.neighbors}}" class="slider" id="neighbors">
-                    </span>
-                </div>
-                <div class="col-4">
-                    <button type="button" class="btn btn-dark disabled col-12">
-                        <center>1촌 : <span id="value3"></span>%</center>
-                    </button>
-                </div>
-                <script>change_bar_value("neighbors", "value3");</script>
-            </div>
-        </div>
-    </div>
+    <hr style="padding-bottom:15px"/>
 
     <!-- result layout -->
-
-    <div class="row" style="padding:15px 0 15px">
+    <div class="row" style="padding:15px 0 15px;">
         <div class="col-6">
             <div class="card">
-                <div class="card-header text-white bg-secondary">
-                    연관 매장 비율
+                <div class="card-header bg-light" style="background-color:#73C3B4">
+                    <b>고객에게 추천될 가맹점</b>
                 </div>
                 <div class="card-body">
                     <div id="relation-graph" style="width:100%; height:400px;"></div>
@@ -155,7 +183,7 @@
         type: 'column'
     },
     title: {
-        text: '연관 매장 비율'
+        text: '고객에게 추천될 가맹점'
     },
     subtitle: {
         text: ' from HyundaiCard transaction data'
@@ -195,8 +223,8 @@
         </div>
         <div class="col-6">
             <div class="card">
-                <div class="card-header text-white bg-secondary">
-                    성향 비율
+                <div class="card-header bg-light">
+                    <b>고객 성향</b>
                 </div>
                 <div class="card-body">
                     <div id="attribute-graph" style="width: 100%; height: 400px;"></div>
@@ -210,7 +238,7 @@
         type: 'pie'
     },
     title: {
-        text: '2017-11-01 ~ 2017-11-22 성향 비율'
+        text: '2017-11-01 ~ 2017-11-22 선호 태그'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -241,21 +269,43 @@
     <div class="row" style="padding-top:15px">
         <div class="col-6">
             <div class="card">
-                <div class="card-header text-white bg-secondary">
-                    가맹점간 연관 매출 Network
+                <div class="card-header bg-light">
+                    <b>BNS Network</b>
                 </div>
                 <div class="card-body">
-                    {{result.network|safe}}
+                    {{result.integrated_network|safe}}
                 </div> <!-- div class="card-body"-->
             </div>
         </div>
         <div class="col-6">
             <div class="card">
-                <div class="card-header text-white bg-secondary">
-                    가맹점간 연관 매출 Network
+                <div class="card-header bg-light">
+                    <b>HTG Zone</b>
                 </div>
                 <div class="card-body">
                     {{result.shop_location|safe}}
+                </div> <!-- div class="card-body"-->
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-top:15px">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <b>행위 네트워크</b>
+                </div>
+                <div class="card-body">
+                    {{result.shop_to_shop_network|safe}}
+                </div> <!-- div class="card-body"-->
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <b>태그 네트워크</b>
+                </div>
+                <div class="card-body">
+                    {{result.shop_to_topic_network|safe}}
                 </div> <!-- div class="card-body"-->
             </div>
         </div>

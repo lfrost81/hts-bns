@@ -43,6 +43,7 @@ class TestRecommendIndex(TestCase):
             '빈로이': 20,
             '직장인': 1,
             '점심': 1,
+            '점심': 1,
             '커피': 1
         }
         result = self.ri.recommend(edge_weights, personalization)
