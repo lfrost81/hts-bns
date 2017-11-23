@@ -1,4 +1,5 @@
 from urllib.parse import quote
+import copy
 import re
 
 
@@ -20,9 +21,10 @@ class FusionTableAgent:
 
         where_query = ''
         if filter_col is not None and filters is not None:
-            for i, f in enumerate(filters):
-                filters[i] = '&#39;' + quote(f) + '&#39;'
-            where_query = '+where+%s+in+(%s)' % (filter_col, '%2C+'.join(filters))
+            tmp = copy.deepcopy(filters)
+            for i, f in enumerate(tmp):
+                tmp[i] = '&#39;' + quote(f) + '&#39;'
+            where_query = '+where+%s+in+(%s)' % (filter_col, '%2C+'.join(tmp))
 
         src = src.replace('${WHERE}', where_query)
 
