@@ -92,7 +92,7 @@
             <div class="row">
                 <div class="col-8">
                 <span class="align-middle">
-                    <input type="range" name="shop_to_shop" min="1" max="100" value="{{weights.shop_to_shop}}" class="slider" id="shop_to_shop">
+                    <input type="range" name="shop_to_shop" min="0" max="100" value="{{weights.shop_to_shop}}" class="slider" id="shop_to_shop">
                 </span>
                 </div>
                 <div class="col-4">
@@ -109,7 +109,7 @@
             <div class="row">
                 <div class="col-8">
                     <span class="align-middle">
-                        <input type="range" name="shop_to_topic" min="1" max="100" value="{{weights.shop_to_topic}}" class="slider" id="shop_to_topic">
+                        <input type="range" name="shop_to_topic" min="0" max="100" value="{{weights.shop_to_topic}}" class="slider" id="shop_to_topic">
                     </span>
                 </div>
                 <div class="col-4">
@@ -126,7 +126,7 @@
             <div class="row">
                 <div class="col-8">
                     <span class="align-middle">
-                        <input type="range" name="neighbors" min="1" max="100" value="{{weights.neighbors}}" class="slider" id="neighbors">
+                        <input type="range" name="neighbors" min="0" max="100" value="{{weights.neighbors}}" class="slider" id="neighbors">
                     </span>
                 </div>
                 <div class="col-4">
@@ -161,7 +161,7 @@
         text: ' from HyundaiCard transaction data'
     },
     xAxis: {
-        categories: {{result.shopname_list}},
+        categories: {{result.shopname_list | safe}},
         crosshair: true
     },
     yAxis: {
@@ -187,7 +187,6 @@
     series: [{
         name: '연관비율',
         data: {{result.shopweight_list}}
-
     }]
 });
                             </script>
@@ -232,7 +231,7 @@
     series: [{
         name: 'Brands',
         colorByPoint: true,
-        data: {{result.topic_list}}
+        data: {{result.topic_list|safe}}
     }]
 });
                         </script>
@@ -246,7 +245,7 @@
                     가맹점간 연관 매출 Network
                 </div>
                 <div class="card-body">
-                    <iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;viz=GVIZ&amp;t=GRAPH&amp;gc=true&amp;gd=true&amp;sdb=1&amp;rmax=100000&amp;q=select+col0%2C+col1%2C+col2+from+1T_eyGaARhB3u4WpCSe2s6oFI7ubQtSUKzczRRYLk&amp;qrs=+where+col0+%3E%3D+&amp;qre=+and+col0+%3C%3D+&amp;qe=&amp;uiversion=2&amp;state=%7B%22ps%22%3A%221_4_w_x_0_-11_13_3_o_-14_5_-15_-y_2_h_-2_6_-1d_0_7_1n_-3_8_-1x_6_9_14_-7_1_-s_7_%22%2C%22cx%22%3A18.145597398765894%2C%22cy%22%3A-2.738958097926927%2C%22sw%22%3A553.1471024397231%2C%22sh%22%3A283.97442920096785%2C%22z%22%3A1.0009649160949998%7D&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=600&amp;height=400"></iframe>
+                    {{result.network|safe}}
                 </div> <!-- div class="card-body"-->
             </div>
         </div>
@@ -256,7 +255,7 @@
                     가맹점간 연관 매출 Network
                 </div>
                 <div class="card-body">
-                    <iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;viz=GVIZ&amp;t=GRAPH&amp;gc=true&amp;gd=true&amp;sdb=1&amp;rmax=100000&amp;q=select+col0%2C+col1%2C+col2+from+1T_eyGaARhB3u4WpCSe2s6oFI7ubQtSUKzczRRYLk&amp;qrs=+where+col0+%3E%3D+&amp;qre=+and+col0+%3C%3D+&amp;qe=&amp;uiversion=2&amp;state=%7B%22ps%22%3A%221_4_w_x_0_-11_13_3_o_-14_5_-15_-y_2_h_-2_6_-1d_0_7_1n_-3_8_-1x_6_9_14_-7_1_-s_7_%22%2C%22cx%22%3A18.145597398765894%2C%22cy%22%3A-2.738958097926927%2C%22sw%22%3A553.1471024397231%2C%22sh%22%3A283.97442920096785%2C%22z%22%3A1.0009649160949998%7D&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=600&amp;height=400"></iframe>
+                    {{result.shop_location|safe}}
                 </div> <!-- div class="card-body"-->
             </div>
         </div>
