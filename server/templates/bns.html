@@ -159,7 +159,7 @@
                 </div>
                 <div class="row" style="padding: 15px">
                     <div class="col-12">
-                        <center><button class="btn btn-dark btn-large" style="width:400px; height:50px" id="search_button" type="button" onclick="checkAndMove();"><h4>Recommend</h4></button></center>
+                        <center><button class="btn btn-dark btn-large" style="width:400px; height:50px" id="search_button" type="button" onclick="checkAndMove();"><b>Recommend</b></button></center>
                     </div>
                 </div>
             </form>
@@ -173,7 +173,7 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-header bg-light" style="background-color:#73C3B4">
-                    고객에게 추천될 가맹점
+                    <b>고객에게 추천될 가맹점</b>
                 </div>
                 <div class="card-body">
                     <div id="relation-graph" style="width:100%; height:400px;"></div>
@@ -224,7 +224,7 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-header bg-light">
-                    고객 성향
+                    <b>고객 성향</b>
                 </div>
                 <div class="card-body">
                     <div id="attribute-graph" style="width: 100%; height: 400px;"></div>
@@ -270,7 +270,7 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-header bg-light">
-                    BNS Network
+                    <b>BNS Network</b>
                 </div>
                 <div class="card-body">
                     {{result.integrated_network|safe}}
@@ -280,7 +280,7 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-header bg-light">
-                    HTG Zone
+                    <b>HTG Zone</b>
                 </div>
                 <div class="card-body">
                     {{result.shop_location|safe}}
@@ -292,7 +292,7 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-header bg-light">
-                    행위 네트워크
+                    <b>행위 네트워크</b>
                 </div>
                 <div class="card-body">
                     {{result.shop_to_shop_network|safe}}
@@ -302,7 +302,7 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-header bg-light">
-                    태그 네트워크
+                    <b>태그 네트워크</b>
                 </div>
                 <div class="card-body">
                     {{result.shop_to_topic_network|safe}}
